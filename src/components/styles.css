@@ -1,0 +1,143 @@
+.input {
+    display: flex;
+    width: 95%;
+    position: relative;
+    align-items: center;
+}
+
+.input__box {
+    width: 100%;
+    border-radius: 7px;
+    border: none;
+    padding: 20px 30px;
+    font-size: 25px;
+    box-shadow: inset 0 0 5px black;
+    background-color: rgb(45, 45, 45);
+    color: white;
+}
+
+.input__box:focus {
+    box-shadow: 0 0 10px 1000px rgba(0, 0, 0, 0.614);
+    outline: none;
+}
+
+.input__submit {
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 50px;
+    border: none;
+    background-color: rgb(0, 0, 0);
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 25px;
+    border-radius: 7px 10px 10px 10px;
+    box-shadow: 0 0 5px black;
+    margin: 5px 5px;
+    cursor: pointer;
+    transition: 0.05s all;
+}
+
+.input__submit:hover {
+    transform: scale(1.2);
+}
+
+.input__submit:active {
+    transform: scale(1.4);
+}
+
+.container {
+    display: flex;
+    width: 95%;
+    margin-top: 10px;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.todos {
+    display: flex;
+    width: 47.5%;
+    flex-direction: column;
+    padding: 15px;
+    border-radius: 7px;
+    background-color: rgb(100, 67, 67);
+}
+
+.todos__heading {
+    font-size: 30px;
+}
+
+.todos__single {
+    display: flex;
+    border-radius: 7px;
+    padding: 20px;
+    margin-top: 15px;
+    transition: 0.2s all;
+    box-shadow: 0 0 5px black;
+}
+
+.todos__single:hover {
+    box-shadow: 0 0 10px black;
+    transform: scale(1.02);
+}
+
+.todos__single--text {
+    flex: 1;
+    padding: 5px;
+    border: none;
+    font-size: 20px;
+}
+
+.todos__single--text:focus {
+    outline: none;
+}
+
+.icon {
+    margin-left: 5px;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.icon:hover {
+    color: rgb(255, 255, 255);
+    transform: scale(2);
+}
+
+@media (max-width: 1100px) {
+    .todos {
+        width: 45%;
+    }
+}
+
+@media (max-width: 768px) {
+    .input {
+        width: 95%;
+    }
+    .todos {
+        width: 95%;
+        margin-bottom: 100px;
+    }
+    .container {
+        width: 95%;
+        flex-direction: column;
+    }
+}
+
+.remove {
+    background-color: rgb(55, 82, 55);
+}
+
+.drag {
+    background-color: rgb(75, 75, 75, 0.5);
+}
+
+.dragactive {
+    z-index: 1;
+    box-shadow: 0 0 20px 10px rgb(255, 0, 0, 0.25);
+}
+
+.dragcomplete {
+    z-index: 1;
+    box-shadow: 0 0 20px 10px rgb(0, 133, 0, 0.25);
+}
